@@ -42,6 +42,9 @@ def handle_thread_control(messaging_object):
     if metadata == "list all":
         send_api.send_simple_message(psid, "\n\n".join(constant.default_jokes))
         send_api.send_simple_message(psid, "\n\n".join(constant.default_jokes))
+        send_api.send_simple_message(psid, "\n\n".join(constant.default_jokes))
+    elif metadata == "in between":
+        return
     handle_payload(psid, constant.payload.START_AGAIN_PAYLOAD)
 
 def handle_message(messaging_object):
